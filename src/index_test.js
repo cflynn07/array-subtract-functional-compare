@@ -115,6 +115,8 @@ describe('src/index', () => {
     test.array(c)
       .is([{
         name: 'Erica'
+      }, {
+        name: 'Erica'
       }])
 
     test.value(c[0])
@@ -198,6 +200,8 @@ describe('src/index', () => {
         name: 'Erica'
       }, {
         name: 'John'
+      }, {
+        name: 'Tim'
       }, {
         name: 'Tim'
       }])

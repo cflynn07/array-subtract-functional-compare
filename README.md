@@ -16,7 +16,7 @@ Inspired by Ruby's built in Array Difference: [Ruby Docs: Array-Difference][0]
 
 `array-subtract-functional-compare` is slightly different from the NPM package
 [array-difference][1]. This module will subtract one array from another array, and return a new
-array with a unique subset of the values in the first array. `array-difference` computes the
+array with a subset of the values in the first array. `array-difference` computes the
 [symmetric difference][2] (XOR) of two arrays.
 
 Symmetric Difference vs Array Subtraction
@@ -31,16 +31,16 @@ Array subtraction: A - B = [1, 2]
 
 ```js
 // In Ruby the subtraction operator is overloaded to work with arrays
-[1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5] - [2, 3, 4]
-// => [1, 5]
+[1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5] - [1, 3, 4]
+// => [2, 2, 5, 5, 5, 5, 5]
 
 // Equivalent operation in JavaScript using array-subtract
 var Subtract = require('array-subtract')
 var subtract = new Subtract({
   comparator: (a, b) => { return a === b }
 })
-subtract.sub([1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5], [2, 3, 4])
-// => [1, 5]
+subtract.sub([1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5], [1, 3, 4])
+// => [2, 2, 5, 5, 5, 5, 5]
 ```
 
 Usage
@@ -52,6 +52,8 @@ var namesA = [{
   name: 'Jessica'
 }, {
   name: 'Sam'
+}, {
+  name: 'Jessica'
 }]
 
 var namesB = [{
@@ -73,7 +75,7 @@ var subtract = new Subtract((itemA, itemB) => {
 
 // namesA - namesB
 var namesC = subtract.sub(namesA, namesB)
-// => [{ name: 'David' }, { name: 'Jessica' }]
+// => [{ name: 'David' }, { name: 'Jessica' }, { name: 'Jessica' }]
 ```
 
 Testing

@@ -44,10 +44,7 @@ class ArraySubtract {
       })
       if (!~bFindIndex) {
         // aVal does not exist in b
-        let resultArrayFindIndex = findIndex(resultArray, (val) => {
-          return this.comparator(aVal, deepcopy(val))
-        })
-        if (!~resultArrayFindIndex) resultArray.push(aVal)
+        resultArray.push(aVal)
       }
     }
     return resultArray
