@@ -7,8 +7,8 @@ array-subtract-functional-compare
 [![Dependency Status](https://david-dm.org/cflynn07/array-subtract-functional-compare.svg)](https://david-dm.org/cflynn07/array-subtract-functional-compare)
 [![devDependency Status](https://david-dm.org/cflynn07/array-subtract-functional-compare/dev-status.svg)](https://david-dm.org/cflynn07/array-subtract-functional-compare#info=devDependencies)
 
-[![NPM](https://nodei.co/npm/array-subtract.png?compact=true)](https://nodei.co/npm/array-subtract/)
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)  
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![NPM](https://nodei.co/npm/array-subtract.png?compact=true)](https://nodei.co/npm/array-subtract/)  
 
 Compute the difference between two arrays with an optional custom equality comparison method.
 
