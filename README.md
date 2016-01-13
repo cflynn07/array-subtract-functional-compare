@@ -52,14 +52,14 @@ var namesB = [{
 }]
 
 var Subtract = require('array-subtract')
-var subtract = new Subtract({
-  /**
-   * @param {*} itemA - Any element of an array argument passed to subtract.sub
-   * @param {*} itemB - Any element of an array argument passed to subtract.sub
-   */
-  accessor: (itemA, itemB) => {
-    return itemA.name === itemB.name
-  }
+/**
+ * Arguments of comparator function passed to new Subtract()
+ *
+ * @param {*} itemA - Any element of an array argument passed to subtract.sub
+ * @param {*} itemB - Any element of an array argument passed to subtract.sub
+ */
+var subtract = new Subtract((itemA, itemB) => {
+  return itemA.name === itemB.name
 })
 
 // namesA - namesB
