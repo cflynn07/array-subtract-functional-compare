@@ -1,0 +1,24 @@
+{
+  "name": "array-difference-functional",
+  "version": "1.0.0",
+  "description": "Compute the difference between two arrays with an optional custom equality comparison method.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cflynn07/array-difference-functional.git"
+  },
+  "keywords": [
+    "array",
+    "array-difference",
+    "array-difference-functional",
+    "array-subtract"
+  ],
+  "author": "Casey Flynn <cflynn.us@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cflynn07/array-difference-functional/issues"
+  }
+}
