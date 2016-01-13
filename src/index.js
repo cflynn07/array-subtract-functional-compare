@@ -3,18 +3,29 @@
  */
 'use strict'
 
+const deepcopy = require('deepcopy')
+const findIndex = require('101/find-index')
+const isFunction = require('101/is-function')
+
 class ArraySubtract {
   /**
-   *
+   * Accepts a function as a comparator
+   * @constructor
+   * @throws
+   * @param {Function} comparator
    */
-  constructor (opts) {
-    this.accessor = opts.accessor
+  constructor (comparator) {
+    if (!isFunction(comparator)) {
+      throw new Error('must be a function')
+    }
+    this.comparator = comparator
   }
 
   /**
    * Returns a new array that contains a unique set of all the values in `a` that do not have
    * corresponding values in b
    *
+   * @throws
    * @param {Array<*>} a
    * @param {Array<*>} b
    * @return Array<*>
@@ -25,16 +36,21 @@ class ArraySubtract {
         throw new Error('invalid arguments, arguments to ArraySubtract.prototype.sub must be Arrays')
       }
     })
-    return []
-
     var resultArray = []
     for (let i = 0, lenA = a.length; i < lenA; i++) {
-      let aVal = a[i]
-      for (let k = 0, lenB = b.length; k < lenB; k++) {
-        let bVal = b[k]
-
+      let aVal = deepcopy(a[i])
+      let bFindIndex = findIndex(b, (val) => {
+        return this.comparator(aVal, deepcopy(val))
+      })
+      if (!~bFindIndex) {
+        // aVal does not exist in b
+        let resultArrayFindIndex = findIndex(resultArray, (val) => {
+          return this.comparator(aVal, deepcopy(val))
+        })
+        if (!~resultArrayFindIndex) resultArray.push(aVal)
       }
     }
+    return resultArray
   }
 }
 

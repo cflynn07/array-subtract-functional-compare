@@ -12,10 +12,8 @@ describe('src/index', () => {
   var subtract
 
   beforeEach(() => {
-    subtract = new Subtract({
-      accessor: (obj) => {
-        return obj.name
-      }
+    subtract = new Subtract((a, b) => {
+      return a.name === b.name
     })
   })
 
@@ -52,7 +50,9 @@ describe('src/index', () => {
     var c = subtract.sub(a, b)
 
     test.array(c)
-      .is([])
+      .is([{
+        name: 'Erica'
+      }])
 
     test.value(c)
       .isNotStrictEqualTo(a)
@@ -74,7 +74,7 @@ describe('src/index', () => {
     }]
 
     var aCopy = deepcopy(a)
-    var bCopy = deepcopy(a)
+    var bCopy = deepcopy(b)
 
     var c = subtract.sub(a, b)
 
@@ -108,7 +108,7 @@ describe('src/index', () => {
     }]
 
     var aCopy = deepcopy(a)
-    var bCopy = deepcopy(a)
+    var bCopy = deepcopy(b)
 
     var c = subtract.sub(a, b)
 
@@ -143,7 +143,7 @@ describe('src/index', () => {
     }]
 
     var aCopy = deepcopy(a)
-    var bCopy = deepcopy(a)
+    var bCopy = deepcopy(b)
 
     var c = subtract.sub(a, b)
 
@@ -189,7 +189,7 @@ describe('src/index', () => {
     }]
 
     var aCopy = deepcopy(a)
-    var bCopy = deepcopy(a)
+    var bCopy = deepcopy(b)
 
     var c = subtract.sub(a, b)
 
