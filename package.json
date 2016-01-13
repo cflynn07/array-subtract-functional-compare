@@ -30,6 +30,15 @@
   "bugs": {
     "url": "https://github.com/cflynn07/array-subtract-functional-compare/issues"
   },
+  "homepage": "https://github.com/cflynn07/array-subtract-functional-compare",
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "beforeEach",
+      "describe",
+      "it"
+    ]
+  },
   "devDependencies": {
     "babel-cli": "^6.4.0",
     "babel-eslint": "^4.1.6",
