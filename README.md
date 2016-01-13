@@ -6,8 +6,9 @@ Compute the difference between two arrays with an optional custom equality compa
 Inspired by Ruby's built in Array Difference: [Ruby Docs: Array-Difference][0]
 
 `array-subtract-functional-compare` is slightly different from the NPM package
-[array-difference][1]. This module will subtract one array from another, whereas array-difference
-will give the [symmetric difference][2] (XOR) of two arrays.
+[array-difference][1]. This module will subtract one array from another array, and return a copied
+array with a unique set of all the values in the first array. `array-difference` computes the
+[symmetric difference][2] (XOR) of two arrays.
 
 Symmetric Difference vs Array Subtraction
 -----------------------------------------
