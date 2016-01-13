@@ -72,6 +72,17 @@ var namesC = subtract.sub(namesA, namesB)
 }]
 ```
 
+Testing
+-------
+```
+$ npm run test
+$ npm run html-test-cov # Will generate HTML coverage report and attempt to auto-open Chrome (OSX)
+```
+
+License
+-------
+MIT
+
 [0]: http://ruby-doc.org/core-2.3.0/Array.html#2D-method
 [1]: https://www.npmjs.com/package/array-difference
 [2]: https://en.wikipedia.org/wiki/Symmetric_difference
