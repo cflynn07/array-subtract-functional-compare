@@ -1,6 +1,6 @@
 {
   "name": "array-subtract",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compute the difference between two arrays with an optional custom equality comparison method.",
   "main": "lib/index.js",
   "scripts": {
