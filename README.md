@@ -1,6 +1,15 @@
 array-subtract-functional-compare
 =================================
 
+[![Build Status](https://travis-ci.org/cflynn07/array-subtract-functional-compare.svg)](https://travis-ci.org/cflynn07/array-subtract-functional-compare)
+[![Code Climate](https://codeclimate.com/github/cflynn07/array-subtract-functional-compare/badges/gpa.svg)](https://codeclimate.com/github/cflynn07/array-subtract-functional-compare)
+[![Test Coverage](https://codeclimate.com/github/cflynn07/array-subtract-functional-compare/badges/coverage.svg)](https://codeclimate.com/github/cflynn07/array-subtract-functional-compare)
+[![Dependency Status](https://david-dm.org/cflynn07/array-subtract-functional-compare.svg)](https://david-dm.org/cflynn07/array-subtract-functional-compare)
+[![devDependency Status](https://david-dm.org/cflynn07/array-subtract-functional-compare/dev-status.svg)](https://david-dm.org/cflynn07/array-subtract-functional-compare#info=devDependencies)
+
+[![NPM](https://nodei.co/npm/array-subtract.png?compact=true)](https://nodei.co/npm/array-subtract/)
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)  
+
 Compute the difference between two arrays with an optional custom equality comparison method.
 
 Inspired by Ruby's built in Array Difference: [Ruby Docs: Array-Difference][0]
