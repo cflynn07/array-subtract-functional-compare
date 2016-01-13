@@ -17,7 +17,7 @@ A: [1, 2, 3, 4, 5]
 B: [3, 4, 5, 6, 7]
 
 Symmetric difference: A XOR B = [1, 2, 6, 7]
-Array subtraction A - B = [1, 2]
+Array subtraction: A - B = [1, 2]
 ```
 
 ```js
@@ -54,22 +54,17 @@ var namesB = [{
 var Subtract = require('array-subtract')
 var subtract = new Subtract({
   /**
-   * @param {*} namesArrayItem
-   * @param {Number} namesArrayIndex
-   * @param {Number} subtractArgumentsIndex
+   * @param {*} itemA - Any element of an array argument passed to subtract.sub
+   * @param {*} itemB - Any element of an array argument passed to subtract.sub
    */
-  accessor: (namesArrayItem, namesArrayIndex, subtractArgumentsIndex) => {
-    return namesArrayItem.name
+  accessor: (itemA, itemB) => {
+    return itemA.name === itemB.name
   }
 })
 
 // namesA - namesB
 var namesC = subtract.sub(namesA, namesB)
-// => [{
-  name: 'David'
-}, {
-  name: 'Jessica'
-}]
+// => [{ name: 'David' }, { name: 'Jessica' }]
 ```
 
 Testing
