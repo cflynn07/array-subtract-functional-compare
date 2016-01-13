@@ -16,7 +16,7 @@ class ArraySubtract {
    */
   constructor (comparator) {
     if (!isFunction(comparator)) {
-      throw new Error('must be a function')
+      throw new Error('argument must be a function')
     }
     this.comparator = comparator
   }
@@ -31,11 +31,9 @@ class ArraySubtract {
    * @return Array<*>
    */
   sub (a, b) {
-    Array.prototype.splice.call(this, arguments).forEach((funcArg) => {
-      if (!Array.isArray(funcArg)) {
-        throw new Error('invalid arguments, arguments to ArraySubtract.prototype.sub must be Arrays')
-      }
-    })
+    if (!Array.isArray(a) || !Array.isArray(b)) {
+      throw new Error('invalid arguments, arguments to ArraySubtract.prototype.sub must be Arrays')
+    }
     var resultArray = []
     for (let i = 0, lenA = a.length; i < lenA; i++) {
       let aVal = deepcopy(a[i])

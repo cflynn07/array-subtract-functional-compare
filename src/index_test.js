@@ -17,8 +17,22 @@ describe('src/index', () => {
     })
   })
 
-  it('should throw an Error if passed non-array arguments', () => {
-    test.exception(subtract.sub(0xFF, 'hello'))
+  it('should throw an Error if not passed a function', () => {
+    var throws = () => {
+      new Subtract(null)
+    }
+    test.exception(throws)
+  })
+
+  it('should throw an Error if not passed arrays', () => {
+    var willThrow1 = () => {
+      subtract.sub(0xFF, [])
+    }
+    var willThrow2 = () => {
+      subtract.sub([], 0xFF)
+    }
+    test.exception(willThrow1)
+    test.exception(willThrow2)
   })
 
   it('should handle an empty array as first argument', () => {
