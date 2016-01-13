@@ -36,9 +36,7 @@ Array subtraction: A - B = [1, 2]
 
 // Equivalent operation in JavaScript using array-subtract
 var Subtract = require('array-subtract')
-var subtract = new Subtract({
-  comparator: (a, b) => { return a === b }
-})
+var subtract = new Subtract((a, b) => { return a === b })
 subtract.sub([1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5], [1, 3, 4])
 // => [2, 2, 5, 5, 5, 5, 5]
 ```
@@ -69,9 +67,7 @@ var Subtract = require('array-subtract')
  * @param {*} itemA - Any element of an array argument passed to subtract.sub
  * @param {*} itemB - Any element of an array argument passed to subtract.sub
  */
-var subtract = new Subtract((itemA, itemB) => {
-  return itemA.name === itemB.name
-})
+var subtract = new Subtract((itemA, itemB) => { return itemA.name === itemB.name })
 
 // namesA - namesB
 var namesC = subtract.sub(namesA, namesB)
