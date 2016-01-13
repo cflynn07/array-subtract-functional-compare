@@ -1,5 +1,5 @@
 {
-  "name": "array-difference-functional",
+  "name": "array-subtract-functional-compare",
   "version": "1.0.0",
   "description": "Compute the difference between two arrays with an optional custom equality comparison method.",
   "main": "index.js",
@@ -8,17 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cflynn07/array-difference-functional.git"
+    "url": "https://github.com/cflynn07/array-subtract-functional-compare.git"
   },
   "keywords": [
-    "array",
+    "Ruby array subtract",
+    "array subtract",
     "array-difference",
     "array-difference-functional",
-    "array-subtract"
+    "array-subtract",
+    "array-subtract-functional-compare",
+    "subtract arrays"
   ],
   "author": "Casey Flynn <cflynn.us@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cflynn07/array-difference-functional/issues"
+    "url": "https://github.com/cflynn07/array-subtract-functional-compare/issues"
   }
 }

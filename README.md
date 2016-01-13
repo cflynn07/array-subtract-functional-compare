@@ -1,13 +1,13 @@
-array-difference-functional
-===========================
+array-subtract-functional-compare
+=================================
 
 Compute the difference between two arrays with an optional custom equality comparison method.
 
 Inspired by Ruby's built in Array Difference: [Ruby Docs: Array-Difference][0]
 
-`array-difference-functional` is slightly different from the NPM package [array-difference][1].
-This module will subtract one array from another, whereas array-difference will give the
-[symmetric difference][2] (XOR) of two arrays.
+`array-subtract-functional-compare` is slightly different from the NPM package
+[array-difference][1]. This module will subtract one array from another, whereas array-difference
+will give the [symmetric difference][2] (XOR) of two arrays.
 
 Symmetric Difference vs Array Subtraction
 -----------------------------------------
@@ -36,20 +36,20 @@ var namesB = [{
   name: 'Tim'
 }]
 
-var ADF = require('array-difference-functional')
-var adf = new ADF({
+var Subtract = require('array-subtract')
+var subtract = new Subtract({
   /**
    * @param {*} namesArrayItem
    * @param {Number} namesArrayIndex
-   * @param {Number} adfArgumentIndex
+   * @param {Number} subtractArgumentsIndex
    */
-  accessor: (namesArrayItem, namesArrayIndex, adfArgumentIndex) => {
+  accessor: (namesArrayItem, namesArrayIndex, subtractArgumentsIndex) => {
     return namesArrayItem.name
   }
 })
 
 // namesA - namesB
-var namesC = adf.subtract(namesA, namesB)
+var namesC = subtract.sub(namesA, namesB)
 // => [{
   name: 'David'
 }, {
