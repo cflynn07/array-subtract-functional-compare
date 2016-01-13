@@ -25,6 +25,7 @@ class ArraySubtract {
         throw new Error('invalid arguments, arguments to ArraySubtract.prototype.sub must be Arrays')
       }
     })
+    return []
 
     var resultArray = []
     for (let i = 0, lenA = a.length; i < lenA; i++) {
