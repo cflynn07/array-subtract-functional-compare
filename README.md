@@ -77,6 +77,7 @@ var namesC = subtract.sub(namesA, namesB)
 Testing
 -------
 ```
+# Run using Node v4.0.0 or higher
 $ npm run test
 $ npm run html-test-cov # Will generate HTML coverage report and attempt to auto-open Chrome (OSX)
 ```
