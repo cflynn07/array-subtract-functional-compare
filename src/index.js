@@ -3,7 +3,6 @@
  */
 'use strict'
 
-const deepcopy = require('deepcopy')
 const findIndex = require('101/find-index')
 const isFunction = require('101/is-function')
 
@@ -36,9 +35,9 @@ class ArraySubtract {
     }
     var resultArray = []
     for (let i = 0, lenA = a.length; i < lenA; i++) {
-      let aVal = deepcopy(a[i])
+      let aVal = a[i]
       let bFindIndex = findIndex(b, (val) => {
-        return this.comparator(aVal, deepcopy(val))
+        return this.comparator(aVal, val)
       })
       if (!~bFindIndex) {
         // aVal does not exist in b

@@ -19,7 +19,7 @@ describe('src/index', () => {
 
   it('should throw an Error if not passed a function', () => {
     var throws = () => {
-      new Subtract(null)
+      throw new Subtract(null)
     }
     test.exception(throws)
   })
@@ -97,9 +97,6 @@ describe('src/index', () => {
         name: 'Tim'
       }])
 
-    test.value(c[0])
-      .isNotStrictEqualTo(a[1]) // Assert return val is a deep copy
-
     test.value(c)
       .isNotStrictEqualTo(a)
       .isNotStrictEqualTo(b)
@@ -132,10 +129,6 @@ describe('src/index', () => {
       }, {
         name: 'Erica'
       }])
-
-    test.value(c[0])
-      .isNotStrictEqualTo(a[0])
-      .isNotStrictEqualTo(b[1]) // Assert return val is a deep copy
 
     test.value(c)
       .isNotStrictEqualTo(a)
@@ -171,15 +164,6 @@ describe('src/index', () => {
       }, {
         name: 'Tim'
       }])
-
-    // Assert return val is a deep copy
-    test
-      .value(c[0])
-        .isNotStrictEqualTo(a[0])
-      .value(c[1])
-        .isNotStrictEqualTo(a[1])
-      .value(c[2])
-        .isNotStrictEqualTo(a[2])
 
     test.value(c)
       .isNotStrictEqualTo(a)
@@ -219,17 +203,6 @@ describe('src/index', () => {
       }, {
         name: 'Tim'
       }])
-
-    // Assert return val is a deep copy
-    test
-      .value(c[0])
-        .isNotStrictEqualTo(a[0])
-      .value(c[1])
-        .isNotStrictEqualTo(a[1])
-      .value(c[2])
-        .isNotStrictEqualTo(a[2])
-      .value(c[3])
-        .isNotStrictEqualTo(a[2])
 
     test.value(c)
       .isNotStrictEqualTo(a)
