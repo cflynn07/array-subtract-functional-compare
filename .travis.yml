@@ -10,12 +10,11 @@ node_js:
   - "5.4"
 before_script:
   - npm install -g codeclimate-test-reporter
+  - pip install codecov
 script:
   - npm run test
 addons:
   code_climate:
     repo_token: 39ef37630926208d214948c6c0c6140efa9728edfdb98765ac2ff780cb126a06
-before_install:
-  - pip install codecov
 after_success:
   - codecov
