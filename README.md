@@ -3,7 +3,7 @@ array-subtract-functional-compare
 
 [![Build Status](https://travis-ci.org/cflynn07/array-subtract-functional-compare.svg)](https://travis-ci.org/cflynn07/array-subtract-functional-compare)
 [![Code Climate](https://codeclimate.com/github/cflynn07/array-subtract-functional-compare/badges/gpa.svg)](https://codeclimate.com/github/cflynn07/array-subtract-functional-compare)
-[![Test Coverage](https://codeclimate.com/github/cflynn07/array-subtract-functional-compare/badges/coverage.svg)](https://codeclimate.com/github/cflynn07/array-subtract-functional-compare)
+[![codecov.io](https://codecov.io/github/cflynn07/array-subtract-functional-compare/coverage.svg?branch=master)](https://codecov.io/github/cflynn07/array-subtract-functional-compare?branch=master)
 [![Dependency Status](https://david-dm.org/cflynn07/array-subtract-functional-compare.svg)](https://david-dm.org/cflynn07/array-subtract-functional-compare)
 [![devDependency Status](https://david-dm.org/cflynn07/array-subtract-functional-compare/dev-status.svg)](https://david-dm.org/cflynn07/array-subtract-functional-compare#info=devDependencies)
 
